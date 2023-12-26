@@ -3,11 +3,11 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../src/locations.dart' as locations;
 import 'get_user_location.dart';
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(home: MyApp());
-  }
+  State<MyApp> createState() => home_screen();
 }
 
 class home_screen extends State<MyApp> {

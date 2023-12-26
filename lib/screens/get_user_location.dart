@@ -84,13 +84,7 @@ class tester extends State<testApp> {
                     getCurrentLocation();
                   },
                   child: Text('Get Current Location')),
-              ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const MyApp()));
-                  },
-                  child: const Text('Next Page',
-                      style: TextStyle(fontWeight: FontWeight.bold)))
+              
             ],
           ),
         ),
@@ -119,26 +113,5 @@ class tester extends State<testApp> {
   void dispose() {
     BackgroundLocation.stopLocationService();
     super.dispose();
-  }
-}
-
-class SecondRoute extends StatelessWidget {
-  const SecondRoute({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Second Route'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('Go back!'),
-        ),
-      ),
-    );
   }
 }
